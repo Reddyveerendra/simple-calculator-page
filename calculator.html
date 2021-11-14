@@ -7,17 +7,20 @@
 				var x=document.getElementById('firstNum').value;
 				var y=document.getElementById('secondNum').value;
                 var z=document.getElementById('operator').value;
+                const validOperators = ['+', '-', '*', '/', '%'];
                 if (!x || !y)
-                 {
+                {
 			        alert("Enter some value in input field");
 		        }
-				const validOperators = ['+', '-', '*', '/', '%'];
-		        if (!validOperators.includes(z))
-				{
+		        else if(!validOperators.includes(z))
+                {
                     alert("Operator value should be any one of +, -, *, /, %");
 				}
+                else
+                {
 				const ans= eval(x + z + y)
 				alert(`${x} ${z} ${y} = ${ans}`);
+                }
 			}
 		</script>
 	</head>
