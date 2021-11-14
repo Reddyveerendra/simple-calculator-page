@@ -9,15 +9,15 @@
                 var z=document.getElementById('operator').value;
                 if (!x || !y)
                  {
-			        document.getElementById("output").innerHTML = "Enter some value in 2nd input field";
+			        alert("Enter some value in input field");
 		        }
 				const validOperators = ['+', '-', '*', '/', '%'];
-		        if (!validOperators.includes(operator))
+		        if (!validOperators.includes(z))
 				{
-                     document.getElementById("output").innerHTML = "Operator value should be any one of +, -, *, /, %";
+                    alert("Operator value should be any one of +, -, *, /, %");
 				}
 				const ans= eval(x + z + y)
-				document.getElementById("output").innerHTML=`${x} ${z} ${y} = ${ans}`;
+				alert(`${x} ${z} ${y} = ${ans}`);
 			}
 		</script>
 	</head>
@@ -30,7 +30,5 @@
 		<input type="text"  id="operator"/><br><br>
 	<input type="submit" id="calculate" onClick="calculator()"/>
     <br>
-	<div id="output"></div>
 </body>
-
 </html>
